@@ -1,0 +1,68 @@
+
+/* mobile layout */
+#reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 24px;
+    max-width: 1158px;
+    margin-inline: auto;
+}
+
+.review-card{
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+    padding: 30px;
+    border-radius: 10px;
+
+    background-color: var(--white);
+}
+
+.review-card > div{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.review-card > div > div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width : 600px){
+    #reviews{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        'a a'
+        'b c'
+        'd d'
+        'e e';
+    }
+
+    .review-card:nth-child(1){grid-area: a}
+    .review-card:nth-child(2){grid-area: b}
+    .review-card:nth-child(3){grid-area: c}
+    .review-card:nth-child(4){grid-area: d}
+    .review-card:nth-child(5){grid-area: e}
+}
+
+@media (min-width : 1000px){
+    #reviews{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'a a b e'
+        'c d d e';
+    }
+
+    .review-card:nth-child(1){grid-area: a}
+    .review-card:nth-child(2){grid-area: b}
+    .review-card:nth-child(3){grid-area: c}
+    .review-card:nth-child(4){grid-area: d}
+    .review-card:nth-child(5){grid-area: e}
+}

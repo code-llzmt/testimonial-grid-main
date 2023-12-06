@@ -1,0 +1,97 @@
+
+/* Barlow Semi Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 13px;
+}
+
+/*
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+*/
+
+:root{
+    /* cards bg */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --veryDark-grayishBlue: hsl(217, 19%, 35%);
+    --veryDark-blackishBlue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    --veryDark-blackishBlue-05: hsl(219, 29%, 14%, 0.5);
+    --white-05: hsl(0, 0%, 100%, 0.5);
+
+    --veryDark-blackishBlue-07: hsl(219, 29%, 14%, 0.7);
+    --white-07: hsl(0, 0%, 100%, 0.7);
+
+    /* font colors */
+    --light-gray: hsl(0, 0%, 81%);
+    --lightGrayish-blue: hsl(210, 46%, 95%);
+    
+    --fontWeight-medium: 500;
+    --fontWeight-semiBold: 600;
+}
+
+body{
+    max-width: 1440px;
+    margin-inline: auto;
+    background-color: var(--lightGrayish-blue);
+    
+    font-size: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: var(--fontWeight-medium);
+}
+
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+
+img{
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--white-07);
+    border-radius: 50%;
+}
+
+.review-card:nth-child(4) > div > img{
+    border: 2px solid var(--moderate-violet);
+}
+
+
+
+/* fonts & bg */
+.review-card:nth-child(1){background-color: var(--moderate-violet)}
+.review-card:nth-child(2){background-color: var(--veryDark-grayishBlue)}
+.review-card:nth-child(3){background-color: var(--white)}
+.review-card:nth-child(4){background-color: var(--veryDark-blackishBlue)}
+.review-card:nth-child(5){background-color: var(--white)}
+
+.card-title-white, .card-title-black{
+    font-size: 1.5rem;
+    font-weight: var(--fontWeight-semiBold);
+}
+.card-title-white, .name-white{color: var(--white)}
+.card-title-black, .name-black{color: var(--veryDark-blackishBlue)}
+
+
+.badge{font-weight: var(--fontWeight-medium)}
+.review-card:nth-child(1) .badge{color: var(--white-05)}
+.review-card:nth-child(2) .badge{color: var(--white-05)}
+.review-card:nth-child(3) .badge{color: var(--veryDark-blackishBlue-05)}
+.review-card:nth-child(4) .badge{color: var(--white-05)}
+.review-card:nth-child(5) .badge{color: var(--veryDark-blackishBlue-05)}
+
+.card-content{
+    line-height: 1.5;
+    color: var(--light-gray);
+}
+.review-card:nth-child(1) .card-content{color: var(--white-07)}
+.review-card:nth-child(2) .card-content{color: var(--white-07)}
+.review-card:nth-child(3) .card-content{color: var(--veryDark-blackishBlue-07)}
+.review-card:nth-child(4) .card-content{color: var(--white-07)}
+.review-card:nth-child(5) .card-content{color: var(--veryDark-blackishBlue-07)}
