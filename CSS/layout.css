@@ -1,5 +1,4 @@
 
-/* mobile layout */
 #reviews{
     display: flex;
     flex-direction: column;
@@ -12,11 +11,9 @@
 .review-card{
     display: flex;
     flex-direction: column;
-
     gap: 24px;
     padding: 30px;
     border-radius: 10px;
-
     background-color: var(--white);
 }
 
@@ -31,8 +28,7 @@
     flex-direction: column;
 }
 
-
-@media (min-width : 600px){
+@media (min-width : 700px){
     #reviews{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
